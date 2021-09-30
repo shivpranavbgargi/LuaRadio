@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git clone https://github.com/vsergeev/luaradio.git
+
+cp ./fm.lua ./luaradio 
+ 
+sudo docker build -t lua .
+
+sudo docker run -ti --rm --privileged -v /dev/bus/usb:/dev/bus/usb -v ${PWD}/luaradio:/luaradio lua

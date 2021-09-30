@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker run -ti --rm --privileged -v /dev/bus/usb:/dev/bus/usb -v ${PWD}/luaradio:/luaradio lua #-v /home/shiv/test_docker:/luaradio marcelmaatkamp/luaradio 

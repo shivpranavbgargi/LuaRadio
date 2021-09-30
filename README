@@ -1,0 +1,9 @@
+
+1) $ bash build
+2) $ ./luaradio fm.lua 93.5e6 and let it run for few seconds
+3) Press CTRL+C to stop the capturing
+4) Exit the container using $ exit
+5) $ cd luaradio/
+6) $ paplay wbfm_mono.wav 
+
+# Use only $ bash run the consecutive times.
