@@ -1,4 +1,4 @@
-#LuaRadio docker for RTL-SDR
+# LuaRadio docker for RTL-SDR
 
 1) $ bash build - to build the docker image
 2) $ ./luaradio fm.lua 93.5e6 - let it run for few seconds
