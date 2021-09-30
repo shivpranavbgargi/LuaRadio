@@ -4,7 +4,7 @@
 
 - `$ bash build` to build the docker image
 - `$ ./luaradio fm.lua 93.5e6` and let it run for few seconds
-- Press CTRL+C to stop the capturing
+- `CTRL+C` to stop the capturing
 - `$ exit` to exit the container  
 - `$ paplay ./luaradio/wbfm_mono.wav` to play the recorded audio
 - `$ bash run` can be used for subsequent runs.
