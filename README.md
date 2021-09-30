@@ -1,4 +1,4 @@
-# LuaRadio as docker image
+# LuaRadio as a docker image
 
 ### Record and listen to FM radio with an RTL-SDR by following the steps below. 
 
