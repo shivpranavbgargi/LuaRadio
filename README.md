@@ -6,5 +6,5 @@
 - `$ ./luaradio fm.lua 93.5e6` and let it run for few seconds
 - `CTRL+C` to stop the capturing
 - `$ exit` to exit the container  
-- `$ paplay ./luaradio/wbfm_mono.wav` to play the recorded audio
-- `$ bash run` can be used for subsequent runs.
+- `$ paplay ./luaradio/wbfm_mono.wav` to play the recording
+- `$ bash run` can be used for subsequent runs
