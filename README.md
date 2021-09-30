@@ -1,6 +1,6 @@
 # LuaRadio as docker image
 
-Record and listen to FM radio by following the steps below. 
+## Record and listen to FM radio by following the steps below. 
 
 - `$ bash build` - to build the docker image
 - `$ ./luaradio fm.lua 93.5e6` - let it run for few seconds
