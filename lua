@@ -3,8 +3,8 @@
 case $1 in
 
 "")
-  echo "1. $ ./lua build - to build the docker image
-2. $ ./lua run - to run the docker"
+  echo "1. $ bash lua build - to build the docker image
+2. $ bash lua run - to run the docker container"
  ;;
 
 "build")
