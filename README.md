@@ -6,5 +6,5 @@
 - `$ bash lua run` to run the docker container
 - `$ ./luaradio fm.lua <FM radio frequency> <Output file name>` to start capturing the FM radio
 - `CTRL+C` to stop the capturing
-- `$ exit` and exit the container.
+- `$ exit` and exit the container
 - The recorded file can be found inside ./luaradio 
