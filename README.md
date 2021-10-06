@@ -2,9 +2,6 @@
 
 ### Record and listen to FM radio with an RTL-SDR by following the steps below. 
 
-- `$ bash lua build` to build the docker image
-- `$ bash lua run` to run the docker container
-- `$ ./luaradio fm.lua <FM radio frequency> <Output file name>` to start capturing the FM radio
-- `CTRL+C` to stop the capturing
-- `$ exit` and exit the container
-- The recorded file can be found inside ./luaradio 
+- `$ bash lua.sh luaradio fm.lua <frequency_in_hz> <output_file_name>` to start the recording (e.g. `$ bash lua.sh luaradio fm.lua 93.5e6 test`)
+- `CTRL+C` to stop the recording
+- `bash lua.sh paplay <output_file_name.wav> to listen to the recording` to listen to the recording (e.g. `$ bash lua.sh paplay test.wav` 
