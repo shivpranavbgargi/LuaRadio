@@ -14,7 +14,7 @@ fi
 USERID=$(id -u)
 DOCKERIMAGE=lua
 
-#funcation build() builds the docker image
+#function build() builds the docker image
 
 function build() {
 
@@ -27,7 +27,7 @@ daemon-binary = /bin/true
 enable-shm = false
 EOF
 
-#the lua script for fm radio
+#lua script for fm radio
 
 git clone https://github.com/vsergeev/luaradio.git
 
@@ -75,8 +75,12 @@ rm etc-pulse-client.conf
 
 }
 
+#docker build 
+
 if [[ "$(docker images -q $DOCKERIMAGE 2> /dev/null)" == "" ]]; then
   build
 fi 
+
+#docker run 
 
 docker run --rm -it --privileged -v /dev/bus/usb:/dev/bus/usb -v /run/user/$USERID/pulse:/run/user/$USERID/pulse -v ${PWD}/luaradio:/home/kode/ $DOCKERIMAGE $@
