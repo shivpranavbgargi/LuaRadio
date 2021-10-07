@@ -38,7 +38,7 @@ cat << EOF > "./luaradio/fm.lua"
 local radio = require('radio')
 
 if #arg < 2 then
-    io.stderr:write(\"Usage: \" .. arg[0] .. \" <FM radio frequency> <Output file name>\n\")
+    io.stderr:write("Usage: " .. arg[0] .. " <FM radio frequency> <Output file name>\n")
     os.exit(1)
 end
 
