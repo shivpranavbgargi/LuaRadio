@@ -1,8 +1,10 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]]; then
-  echo "$ bash lua.sh luaradio fm.lua <frequency_in_hz> <output_file_name> to record the fm radio 
-$ bash lua.sh paplay <output_file_name.wav> to listen to the recording"
+  cat << EOF
+$ bash lua.sh luaradio fm.lua <frequency_in_hz> <output_file_name> to record the fm radio 
+$ bash lua.sh paplay <output_file_name.wav> to listen to the recording
+EOF
   exit 1
 fi
 
@@ -12,7 +14,7 @@ if ! cmd_loc="$(type -p docker)" || [[ -z $cmd_loc ]]; then
 fi
 
 USERID=$(id -u)
-DOCKERIMAGE=lua
+DOCKERIMAGE=lua-debian
 
 #function build() builds the docker image
 
@@ -31,7 +33,9 @@ EOF
 
 git clone https://github.com/vsergeev/luaradio.git
 
- echo "local radio = require('radio')
+cat << EOF > "./luaradio/fm.lua"
+ 
+local radio = require('radio')
 
 if #arg < 2 then
     io.stderr:write(\"Usage: \" .. arg[0] .. \" <FM radio frequency> <Output file name>\n\")
@@ -56,11 +60,12 @@ local sink = radio.WAVFileSink(string.format('%s.wav',name), 1)
 local top = radio.CompositeBlock()
 top:connect(source, tuner, fm_demod, af_filter, af_deemphasis, af_downsampler, sink)
 
-top:run()" > ./luaradio/fm.lua
+top:run()
+EOF
 
 #dockerfile
 
-docker build -t $DOCKERIMAGE -f- . <<EOF
+docker build -t $DOCKERIMAGE -f- . << EOF
 FROM debian:stable-slim
 RUN apt-get update && apt-get -y install luajit libliquid-dev libfftw3-dev rtl-sdr librtlsdr-dev pulseaudio pulseaudio-utils sudo
 COPY etc-pulse-client.conf /etc/pulse/client.conf
