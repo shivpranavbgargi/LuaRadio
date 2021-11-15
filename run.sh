@@ -2,8 +2,8 @@
 
 if [[ $# -eq 0 ]]; then
   cat << EOF
-$ bash lua.sh luaradio fm.lua <frequency_in_hz> <output_file_name> to record the fm radio 
-$ bash lua.sh paplay <output_file_name.wav> to listen to the recording
+$ bash run.sh luaradio fm.lua <frequency_in_hz> <output_file_name> to record the fm radio 
+$ bash run.sh paplay <output_file_name.wav> to listen to the recording
 EOF
   exit 1
 fi
