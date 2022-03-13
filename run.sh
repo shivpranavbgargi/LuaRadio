@@ -88,4 +88,7 @@ fi
 
 #docker run 
 
-docker run --rm -it --privileged -v /dev/bus/usb:/dev/bus/usb -v /run/user/$USERID/pulse:/run/user/$USERID/pulse -v ${PWD}/luaradio:/home/kode/ $DOCKERIMAGE $@
+docker run --rm -it --privileged \
+       	-v /dev/bus/usb:/dev/bus/usb \
+	-v /run/user/$USERID/pulse:/run/user/$USERID/pulse \
+	-v ${PWD}/luaradio:/home/kode/ $DOCKERIMAGE $@
