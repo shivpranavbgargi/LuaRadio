@@ -5,7 +5,7 @@
 - `$ bash run.sh luaradio fm.lua <frequency_in_hz> <output_file_name>` to start the recording 
 
   Example: 
-  ```
+  ```bash
   bash run.sh luaradio fm.lua 93.5e6 test
   ```
 
