@@ -9,4 +9,8 @@
     ```
     
 2. `CTRL+C` to stop the recording
-3. `bash run.sh paplay <output_file_name.wav>` to listen to the recording (e.g. `$ bash run.sh paplay test.wav`)
+3. `bash run.sh paplay <output_file_name.wav>` to listen to the recording 
+ 
+    ```bash
+    bash run.sh paplay test.wav
+    ```
