@@ -1,5 +1,10 @@
 # LuaRadio as a docker image
 
+### Requirements
+
+- An RTL-SDR
+- Docker Engine
+
 ### Record and listen to FM radio with an RTL-SDR by following the steps below. 
 
 1. `$ bash run.sh luaradio fm.lua <frequency_in_hz> <output_file_name>` to start the recording 
